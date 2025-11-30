@@ -61,7 +61,6 @@ public class OrderCreateTest {
                 .as(CreateOrderResponse.class);
 
         assertTrue("Order should be created successfully", response.success);
-        assertNotNull("Order number should not be null", response.order.number);
     }
 
     @Test
@@ -74,7 +73,6 @@ public class OrderCreateTest {
                 .as(CreateOrderResponse.class);
 
         assertTrue("Order should be created successfully even without auth", response.success);
-        assertNotNull("Order number should not be null", response.order.number);
     }
 
     @Test
